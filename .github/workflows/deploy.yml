@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main 
+      - main-pages
 
 jobs:
   build-and-deploy:
@@ -29,9 +30,6 @@ jobs:
 
       - name: Copiar arquivos do frontend-html (TestOracclum)
         run: cp -r TestOracclum/* deploy/
-
-      - name: Copiar JS/CSS específicos se necessário
-        run: cp TestOracclum/Index/scripts-*.js deploy/
 
       - name: Copiar build do React (dist)
         run: cp -r OracclumFrontend/dist/* deploy/
