@@ -20,6 +20,7 @@ html {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 body {
@@ -236,8 +237,8 @@ i:hover{
 }
 .text-wrap {
   width: 50%;
-  max-width: 500px;
-  min-width: 300px;
+  max-width: 800px;
+  min-width: 500px;
 }
 .text-about {
   font-family:'Times New Roman', Times, serif;
