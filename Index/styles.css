@@ -58,19 +58,11 @@ svg {
 
 .title-text {
   font-family: "WoodBlock", sans-serif;
-  font-size: 90%;
+  font-size: 1.3rem;
   text-align: center;
   letter-spacing: 0.1em;
   z-index: 1;
 
-}
-.title-text.svg {
-  font-family: "WoodBlock", sans-serif;
-  font-size: 90%;
-  text-align: center;
-  letter-spacing: 0.1em;
-  z-index: 1;
-  stroke-width: 100%;
 }
 
 .question-form {
@@ -339,10 +331,10 @@ iframe {
 @media (max-width: 768px) {
   .title-text {
     font-size: 1rem;
-    stroke-width: 50%;
+    font-weight: 200;
   }
-  .title-text-svg {
-    stroke-width: 50%;
+  svg path {
+    stroke-width: 0.5;
   }
 
   h1 {
