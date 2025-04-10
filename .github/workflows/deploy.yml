@@ -3,7 +3,7 @@ name: Deploy site to GitHub Pages
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
   build-and-deploy:
@@ -27,14 +27,17 @@ jobs:
       - name: Limpar pasta deploy/
         run: rm -rf deploy && mkdir deploy
 
-      - name: Copiar arquivos do frontend HTML estático
-        run: cp -r TestOracclum/Index/* deploy/
+      - name: Copiar arquivos do frontend-html (TestOracclum)
+        run: cp -r TestOracclum/* deploy/
 
-      - name: Copiar build do React
+      - name: Copiar build do React (dist)
         run: cp -r OracclumFrontend/dist/* deploy/
 
+      - name: Verificar conteúdo final
+        run: ls -R deploy/
+
       - name: Deploy no GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./deploy
