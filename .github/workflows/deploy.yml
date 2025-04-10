@@ -3,7 +3,7 @@ name: Deploy site to GitHub Pages
 on:
   push:
     branches:
-      - main  # ou 'master', depende do seu repositório
+      - main 
 
 jobs:
   build-and-deploy:
@@ -19,7 +19,7 @@ jobs:
           node-version: 22.12
 
       - name: 📂 Instalar dependências e buildar React
-        working-directory: frontend-react
+        working-directory: OracclumFrontend
         run: |
           npm install
           npm run build
