@@ -46,18 +46,18 @@ function CleanBlood() {
 
 function getRandomSplatterImage() {
     const splatters = [
-        '/images/splatter1.png',
-        '/images/splatter2.png',
-        '/images/splatter3.png',
-        '/images/splatter4.png',
-        '/images/splatter5.png',
-        '/images/splatter6.png',
-        '/images/splatter7.png',
-        '/images/splatter8.png',
-        '/images/splatter9.png',
-        '/images/splatter10.png',
-        '/images/splatter11.png',
-        '/images/splatter12.png',
+        'images/splatter1.png',
+        'images/splatter2.png',
+        'images/splatter3.png',
+        'images/splatter4.png',
+        'images/splatter5.png',
+        'images/splatter6.png',
+        'images/splatter7.png',
+        'images/splatter8.png',
+        'images/splatter9.png',
+        'images/splatter10.png',
+        'images/splatter11.png',
+        'images/splatter12.png',
     ];
     const index = Math.floor(Math.random() * splatters.length);
     return splatters[index];
