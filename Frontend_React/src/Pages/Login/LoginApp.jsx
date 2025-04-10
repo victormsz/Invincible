@@ -36,15 +36,15 @@ function LoginApp() {
 
 
     return (
-
+        
         <div className="box">
             <form>
-                <h1 className="login-text">Faça o Login:</h1>
-                <h2>
+                <h1 className="login-text">Login</h1>
+                <p className="header-input">Username</p>
                 <input name="texto" className="login-input" type='text' ref={LoginText} />
+                <p className="header-input">Password</p>
                 <input name="password" className="login-input" type='password' ref={PasswordText} />
                 <button type="button" className="btn-login" onClick={Login}>LOGIN</button>
-                </h2>
             </form>
         </div>
     );
