@@ -31,7 +31,7 @@ jobs:
         run: cp -r TestOracclum/* deploy/
 
       - name: ⚛️ Copiar build do React
-        run: cp -r OracckumFrontend/build/* deploy/
+        run: cp -r OracclumFrontend/build/* deploy/
 
       - name: 🚀 Deploy no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
