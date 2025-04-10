@@ -1,0 +1,40 @@
+name: Deploy site to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # ou 'master', depende do seu repositório
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Checkout do código
+        uses: actions/checkout@v4
+
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12
+
+      - name: 📂 Instalar dependências e buildar React
+        working-directory: frontend-react
+        run: |
+          npm install
+          npm run build
+
+      - name: 🧹 Limpar pasta deploy/
+        run: rm -rf deploy && mkdir deploy
+
+      - name: 📄 Copiar arquivos do frontend-html
+        run: cp -r TestOracclum/* deploy/
+
+      - name: ⚛️ Copiar build do React
+        run: cp -r OracckumFrontend/build/* deploy/
+
+      - name: 🚀 Deploy no GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./deploy
