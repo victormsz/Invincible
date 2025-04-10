@@ -28,10 +28,7 @@ body {
   padding: 0;
   overflow-x: clip;
 }
-footer{
-  position:absolute;
-  bottom: 5px;
-}
+
 .tela {
   position: relative;
   width: 100vw;
