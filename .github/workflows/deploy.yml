@@ -30,6 +30,10 @@ jobs:
 
       - name: Copiar arquivos do frontend-html (TestOracclum)
         run: cp -r TestOracclum/* deploy/
+        - name: Copiar imagens e fontes
+        run: |
+          cp -r TestOracclum/images deploy/
+          cp -r TestOracclum/fonts deploy/
 
       - name: Copiar build do React (dist)
         run: cp -r OracclumFrontend/dist/* deploy/
