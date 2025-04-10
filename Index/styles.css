@@ -234,10 +234,10 @@ i:hover{
   position: relative;
   right:30%;
 }
-.text-wrap{
-  height: fit-content;
+.text-wrap {
   width: 50%;
-  position:relative;
+  max-width: 500px;
+  min-width: 300px;
 }
 .text-about {
   font-family:'Times New Roman', Times, serif;
