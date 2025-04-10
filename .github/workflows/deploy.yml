@@ -20,7 +20,7 @@ jobs:
           node-version: 22.12
 
       - name: Instalar dependências e buildar React
-        working-directory: OracclumFrontend
+        working-directory: Frontend_React
         run: |
           npm install
           npm run build
@@ -29,14 +29,14 @@ jobs:
         run: rm -rf deploy && mkdir deploy
 
       - name: Copiar arquivos do frontend-html (TestOracclum)
-        run: cp -r TestOracclum/* deploy/
+        run: cp -r Frontend_html/* deploy/
         - name: Copiar imagens e fontes
         run: |
-          cp -r TestOracclum/images deploy/
-          cp -r TestOracclum/fonts deploy/
+          cp -r Frontend_html/images deploy/
+          cp -r Frontend_html/fonts deploy/
 
       - name: Copiar build do React (dist)
-        run: cp -r OracclumFrontend/dist/* deploy/
+        run: cp -r Frontend_React/dist/* deploy/
 
       - name: Verificar conteúdo final
         run: ls -R deploy/
