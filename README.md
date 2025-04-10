@@ -14,7 +14,7 @@ This project has three main parts:
 
 ## Credentials
 - Pre created in the database through Backend_node/database/db.js
-- Usernames/Passwords:{
+- Usernames/passwords:{
     RobertKirkman , robert123
     StevenYeun , steven123
     JohnPaesano , john123
