@@ -23,8 +23,7 @@ database.exec(`
   CREATE TABLE IF NOT EXISTS questions (
     key INTEGER PRIMARY KEY AUTOINCREMENT,
     username TEXT,
-    question TEXT,
-    answer TEXT,
+    question TEXT UNIQUE,
     FOREIGN KEY (username) REFERENCES users(username)
   ) STRICT;
 `);
@@ -42,12 +41,17 @@ insertUser.run("StevenYeun", senha2, "Actor");
 insertUser.run("JohnPaesano", senha3, "Musician");
 
 // Inserção de perguntas
-const insertQuestion = database.prepare('INSERT OR REPLACE INTO questions (username, question) VALUES (?, ?)');
-insertQuestion.run("RobertKirkman", "Quantos anos demorou para criar invincible?");
-insertQuestion.run("RobertKirkman", "Quantas vezes vc quis terminar tudo");
-insertQuestion.run("StevenYeun", "Qual o maior desafio para atuar em invincible?");
-insertQuestion.run("JohnPaesano", "Qual sua música favorita de invincible?");
 
+try {
+  const insertQuestion = database.prepare('INSERT INTO questions (username, question) VALUES (?, ?)');
+  insertQuestion.run("RobertKirkman", "Quantos anos demorou para criar invincible?");
+  insertQuestion.run("RobertKirkman", "Quantas vezes vc quis terminar tudo");
+  insertQuestion.run("StevenYeun", "Qual o maior desafio para atuar em invincible?");
+  insertQuestion.run("JohnPaesano", "Qual sua música favorita de invincible?");
+}
+catch (e) {
+  console.log("error:", e)
+}
 console.log("Seed finalizado com sucesso!");
 
 export default database;
