@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="styles.css">
     <script src="scripts-blood.js" defer></script>
     <script src="scripts-questions.js" defer></script>
+    <script src="scripts-about.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 
@@ -26,6 +27,7 @@
                 </text>
             </svg>
         </h1>
+        <p class="text-about"> ESCOLHA A PESSOA PARA MANDAR A PERGUNTA</p>
         <div class="person-select">
             <button class="person-btn" data-person="1" id="1">
                 <img src="images/users/kirkmanplchd.png" alt="Person 1">
@@ -52,58 +54,41 @@
 
     </section>
 
-    <section class="tela">
+    <section class="invincible-section tela" id="sobre-invincible">
         <div class="blood-pool"></div>
-        <p class="title-about clickable">
-            Sobre Invincible:
-        </p>
-        <div class="text-wrap">
-            <p class="text-about" >
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-
-            <p class="text-about" >
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-    </div>
+        <div class="background-slide" id="invincible-bg"></div>
+        <h2 class="title-about clickable">Sobre Invincible</h2>
+        <div class="invincible-container">
+            <div class="invincible-buttons">
+                <button onclick="showInvincible('comic')">HQ</button>
+                <button onclick="showInvincible('tv')">Série de TV</button>
+                <button onclick="showInvincible('plot')">Enredo</button>
+            </div>
+            <div class="invincible-text" id="invincible-text">
+                <p>Selecione uma opção para saber mais sobre Invincible.</p>
+            </div>
+        </div>
     </section>
-    <section class="tela">
+
+    <section class="invincible-section tela" id="sobre-invincible-personagens">
         <div class="blood-pool"></div>
-        <p class="title-about clickable">
-            Personagens:
-        </p>
-
-        <div class="text-wrap">
-            <p class="text-about" >
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-
-            <p class="text-about" >
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into
-                electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of
-                Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
-                Aldus PageMaker including versions of Lorem Ipsum.
-            </p>
-    </div>
-
+        <div id="slide-bg" class="background-slide"></div>
+        <h2 class="title-about clickable">Personagens Principais</h2>
+        <div class="invincible-container">
+            <div class="invincible-buttons">
+                <button onclick="showInvincibleChar('Omni-Man')">Omni-Man</button>
+                <button onclick="showInvincibleChar('Mark-Grayson')">Mark-Grayson</button>
+                <button onclick="showInvincibleChar('Debbie-Grayson')">Debbie-Grayson</button>
+                <button onclick="showInvincibleChar('Cecil-Stedman')">Cecil-Stedman</button>
+                <button onclick="showInvincibleChar('Guardians-Globe')">Guardians-Globe</button>
+            </div>
+            <div class="invincible-text" id="invincible-text-characters">
+                <p>Selecione uma opção para saber mais sobre personagens de Invincible.</p>
+            </div>
+        </div>
     </section>
+
+
 
     <section class="tela" name="tela2">
         <!-- <div align="center"><a class="twitter-timeline" data-width="600" data-dnt="true" data-tweet-limit="4"
