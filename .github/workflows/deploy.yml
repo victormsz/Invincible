@@ -31,9 +31,6 @@ jobs:
         run: cp -r TestOracclum/* deploy/
 
       - name: Copiar JS/CSS específicos se necessário
-        run: cp TestOracclum/scripts-*.js deploy/
-
-      - name: Copiar JS/CSS específicos se necessário
         run: cp TestOracclum/Index/scripts-*.js deploy/
 
       - name: Copiar build do React (dist)
