@@ -28,11 +28,11 @@ jobs:
         run: rm -rf deploy && mkdir deploy
 
       - name: Copiar arquivos do frontend HTML estático
-        run: cp -r TestOracclum/* deploy/
+        run: cp -r TestOracclum/index/* deploy/
 
       - name: Copiar build do React
         run: cp -r OracclumFrontend/dist/* deploy/
-        
+
       - name: Deploy no GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
