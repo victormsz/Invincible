@@ -4,7 +4,6 @@ import bcrypt from "bcrypt";
 
 const database = new Database('./src/database/database.db', { verbose: console.log });
 
-// Uncomment the following lines only if you want to clear all data from the tables
 // Uncomment the following lines only if you want to drop the tables
 // database.exec(`
 //   DROP TABLE IF EXISTS questions;
@@ -37,13 +36,13 @@ const senha2 = bcrypt.hashSync("steven123", 10);
 const senha3 = bcrypt.hashSync("john123", 10);
 
 // Inserção de usuários
-const insertUser = database.prepare('INSERT OR IGNORE INTO users (username, password, title) VALUES (?, ?, ?)');
+const insertUser = database.prepare('INSERT OR REPLACE INTO users (username, password, title) VALUES (?, ?, ?)');
 insertUser.run("RobertKirkman", senha1, "Writer");
 insertUser.run("StevenYeun", senha2, "Actor");
 insertUser.run("JohnPaesano", senha3, "Musician");
 
 // Inserção de perguntas
-const insertQuestion = database.prepare('INSERT OR IGNORE INTO questions (username, question) VALUES (?, ?)');
+const insertQuestion = database.prepare('INSERT OR REPLACE INTO questions (username, question) VALUES (?, ?)');
 insertQuestion.run("RobertKirkman", "Quantos anos demorou para criar invincible?");
 insertQuestion.run("RobertKirkman", "Quantas vezes vc quis terminar tudo");
 insertQuestion.run("StevenYeun", "Qual o maior desafio para atuar em invincible?");

@@ -45,6 +45,10 @@ function QuestionApp() {
 
     const answerQuestion = async (key) => {
         try {
+            if(!answers[key]){
+                alert("Resposta Vazia");
+                throw new Error("No Answer");
+            }
             await api.post('/questions/answer', {
                 answer: answers[key],
                 key: key
@@ -60,14 +64,13 @@ function QuestionApp() {
         fetchQuestions();
         const username = GetCookie("username")
         if (!username){
+            alert("Usuario nao identificado. Faça o Login!")
             navigate("/Login");
         }
     }, [fetchQuestions, navigate]);
 
     return (
         <div className="app-container">
-            {/* <button className="LogOut" onClick={DeleteCookie("username")}>LogOut</button> */}
-            <div className="search-input-group">
                 <form className="search-form">
                     <h1>Buscar pergunta por nome:</h1>
                     <input className="search-input" name="texto" type='text'
@@ -77,7 +80,6 @@ function QuestionApp() {
                         onClick={fetchQuestionsByText}>
                         Procurar</button>
                 </form>
-            </div>
 
             {questions.filter(question => question.answer === null).map(question => (
                 <div className="question-list" key={question.key}>
