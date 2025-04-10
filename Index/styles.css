@@ -58,11 +58,19 @@ svg {
 
 .title-text {
   font-family: "WoodBlock", sans-serif;
-  font-size: 1.3rem;
+  font-size: 90%;
   text-align: center;
   letter-spacing: 0.1em;
   z-index: 1;
 
+}
+.title-text.svg {
+  font-family: "WoodBlock", sans-serif;
+  font-size: 90%;
+  text-align: center;
+  letter-spacing: 0.1em;
+  z-index: 1;
+  stroke-width: 100%;
 }
 
 .question-form {
@@ -252,30 +260,6 @@ i:hover{
   margin-bottom: 1%;
 }
 
-@media (max-width: 768px) {
-  .title-text {
-    font-size: 1rem;
-  }
-
-  h1 {
-    height: 25vh;
-  }
-
-  .fa-shower {
-    font-size: 200%;
-    top: 10px;
-    right: 10px;
-  }
-  #login-btn {
-    font-size: 200%;
-    top: 10px;
-    right: 60px;
-  }
-  .title-about {
-    font-size: 3rem;
-    right: 10%; 
-  }
-}
 .clickable{
   cursor:pointer
 }
@@ -350,4 +334,33 @@ iframe {
 
 .background-slide.no-transition {
   transition: none !important;
+}
+
+@media (max-width: 768px) {
+  .title-text {
+    font-size: 1rem;
+    stroke-width: 50%;
+  }
+  .title-text-svg {
+    stroke-width: 50%;
+  }
+
+  h1 {
+    height: 25vh; 
+  }
+
+  .fa-shower {
+    font-size: 200%;
+    top: 10px;
+    right: 10px;
+  }
+  #login-btn {
+    font-size: 200%;
+    top: 10px;
+    right: 60px;
+  }
+  .title-about {
+    font-size: 3rem;
+    right: 10%; 
+  }
 }
