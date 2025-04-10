@@ -1,6 +1,6 @@
 :root {
   --main-color: #00bcf0;
-  --secondary-color: #ffe556;
+  --secondary-color: #ffd900;
   --main-colorDarker: #007a9c;
 }
 
@@ -12,34 +12,38 @@ html {
   padding: 0;
 }
 .box{
+
   position: fixed;
-  top: 20%;
+  top: 10vh;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%,0);
 
+  display: flex;
+  width: auto;
+  height: auto;
 
- align-items: center;
- flex-direction: column;
- justify-content:top;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
 
+  border-color:var(--secondary-color);
+  border-style: double;
+  border-width: 10px;
+  border-radius: 1%;
 
- border-color: black;
- border-style:double;
- border-width: 10px;
- border-radius: 1%;
-
- padding-left: 5%;
- padding-top: 10%;
+  padding: 5vh;
+  padding-top:1vh
 }
+
 form{
-  position: relative;
+  display: flex;
   background-color: var(--main-color);
   align-items: center;
   flex-direction: column;
   justify-content: center;
 }
 button {
-  margin-top: 10px;
+  margin-top: 30px;
   padding: 8px 25px;
   background-color: transparent;
   border: 2px solid var(--secondary-color);
@@ -62,4 +66,15 @@ button:hover {
 button:active {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-input{
+  font-size: 0.8rem;
+  margin:0.5vh;
+}
+
+input{
+  background-color: #c5f0fc;
+  color: #a39800;
+  margin-bottom: 1vh;
 }

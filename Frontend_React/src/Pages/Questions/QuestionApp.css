@@ -3,10 +3,8 @@
     --primary-color: #4a6fa5;
     --secondary-color: #166088;
     --accent-color: #4fc3f7;
-    --background-color: #f5f7fa;
+    --background-color: #00bcf0;
     --text-color: #333;
-    --error-color: #e53935;
-    --success-color: #43a047;
     --border-radius: 6px;
     --box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
@@ -21,7 +19,8 @@
   
   .app-container {
     max-width: 800px;
-    margin: 40px auto;
+    margin: auto;
+    margin-top: 3vh;
     padding: 20px;
     background-color: white;
     border-radius: var(--border-radius);
@@ -29,20 +28,13 @@
   }
   
   .search-form {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     padding: 20px;
     background-color: white;
     border-radius: var(--border-radius);
     border: 1px solid #e0e0e0;
   }
 
-  .search-form h1 {
-    font-size: 24px;
-    margin-top: 0;
-    margin-bottom: 16px;
-    color: var(--primary-color);
-    font-weight: 600;
-  }
   
   .search-input-group {
     display: flex;
@@ -65,20 +57,7 @@
     box-shadow: 0 0 0 2px rgba(79, 195, 247, 0.2);
   }
   
-  .search-button {
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: var(--border-radius);
-    padding: 12px 24px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .search-button:hover {
-    background-color: var(--secondary-color);
-  }
+
   
   .question-list {
     display: flex;
@@ -122,22 +101,23 @@
     border-color: var(--accent-color);
     box-shadow: 0 0 0 2px rgba(79, 195, 247, 0.2);
   }
-  
-  .answer-button {
+
+  button{
     background-color: var(--accent-color);
-    color: white;
     border: none;
     border-radius: var(--border-radius);
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin-top:0;
+
+  }
+  button:hover{
+    background-color: var(--secondary-color);
   }
   
-  .answer-button:hover {
-    background-color: #0099cc;
-  }
-  
+
   /* Responsive styles */
   @media (max-width: 768px) {
     .question-app-container {
