@@ -1,0 +1,90 @@
+.
+├── Backend_Node
+│   ├── eslint.config.js
+│   ├── node_modules
+│   │   ├── @gar
+│   │   ├── @npmcli
+│   │   ├── @tootallnate
+│   │   └── eslint
+│   │       └── lib
+│   │           └── rules
+│   ├── package-lock.json
+│   ├── package.json
+│   └── src
+│       ├── app
+│       │   ├── controllers
+│       │   │   ├── QuestionController.js
+│       │   │   └── loginController.js
+│       │   └── repositories
+│       │       ├── questionRepository.js
+│       │       └── userRepository.js
+│       ├── database
+│       │   ├── database.db
+│       │   └── db.js
+│       ├── index.js
+│       └── routes.js
+├── Frontend_React
+│   ├── README.md
+│   ├── eslint.config.js
+│   ├── index.html
+│   ├── node_modules
+│   │   └── eslint
+│   │       └── lib
+│   │           └── rules
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── src
+│   │   ├── Pages
+│   │   │   ├── Login
+│   │   │   │   ├── LoginApp.css
+│   │   │   │   └── LoginApp.jsx
+│   │   │   └── Questions
+│   │   │       ├── QuestionApp.css
+│   │   │       └── QuestionApp.jsx
+│   │   ├── main.jsx
+│   │   └── services
+│   │       ├── CookieService.jsx
+│   │       └── api.js
+│   └── vite.config.js
+├── Frontend_html
+│   ├── Index
+│   │   ├── fonts
+│   │   │   ├── SHAXIZOR.TTF
+│   │   │   └── WoodBlock.otf
+│   │   ├── images
+│   │   │   ├── backgrounds
+│   │   │   │   ├── cecil-stedman.png
+│   │   │   │   ├── comic.png
+│   │   │   │   ├── debbie-grayson.webp
+│   │   │   │   ├── guardians-globe.webp
+│   │   │   │   ├── mark-grayson.png
+│   │   │   │   ├── omni-man.webp
+│   │   │   │   ├── plot.webp
+│   │   │   │   └── tv.webp
+│   │   │   ├── splatter1.png
+│   │   │   ├── splatter10.png
+│   │   │   ├── splatter11.png
+│   │   │   ├── splatter12.png
+│   │   │   ├── splatter2.png
+│   │   │   ├── splatter3.png
+│   │   │   ├── splatter4.png
+│   │   │   ├── splatter5.png
+│   │   │   ├── splatter6.png
+│   │   │   ├── splatter7.png
+│   │   │   ├── splatter8.png
+│   │   │   ├── splatter9.png
+│   │   │   └── users
+│   │   │       ├── JohnP.jpg
+│   │   │       ├── kirkmanplchd.png
+│   │   │       └── stevenYeun.jpg
+│   │   ├── index.html
+│   │   ├── scripts-about.js
+│   │   ├── scripts-blood.js
+│   │   ├── scripts-questions.js
+│   │   └── styles.css
+│   ├── README.md
+│   └── projeto.txt
+├── README.md
+└── tree.txt
+
+30 directories, 58 files
